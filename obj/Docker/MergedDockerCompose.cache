@@ -1,0 +1,11 @@
+services:
+  catalog.api:
+    build:
+      context: C:\Users\Student229438\source\repos\MicroservicesApp
+      dockerfile: src/Catalog/Catalog.API/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: catalogapi
+    ports:
+    - target: 80
+version: '3.4'
