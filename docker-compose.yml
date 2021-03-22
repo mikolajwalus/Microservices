@@ -15,27 +15,27 @@ services:
         image: rabbitmq:3-management-alpine
     
     catalog.api:
-        image: ${DOCKER_REGISTRY-}catalogapi
+        image: mikolajwalus/microservices/catalogapi
         build:
             context: .
             dockerfile: src/Catalog/Catalog.API/Dockerfile
 
     basket.api:
-        image: ${DOCKER_REGISTRY-}basketapi
+        image: mikolajwalus/microservices/basketapi
         build:
             context: .
             dockerfile: src/Basket/Basket.API/Dockerfile
 
 
     ordering.api:
-        image: ${DOCKER_REGISTRY-}orderingapi
+        image: mikolajwalus/microservices/orderingapi
         build:
             context: .
             dockerfile: src/Ordering/Ordering.API/Dockerfile
 
 
     ocelotapigateway:
-        image: ${DOCKER_REGISTRY-}ocelotapigateway
+        image: mikolajwalus/microservices/ocelotapigateway
         build:
             context: .
             dockerfile: src/ApiGateway/OcelotAPIGateway/Dockerfile
